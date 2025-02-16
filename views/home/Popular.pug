@@ -1,0 +1,7 @@
+include ../mixins/popular_item.pug
+section.popular
+  .container
+    h2.heading Popular things to do in Bangkok
+    .popular-list
+      each val in [1,2,3,4,5,6,7]
+        +popularItem()

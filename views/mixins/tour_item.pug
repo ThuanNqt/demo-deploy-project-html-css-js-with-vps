@@ -1,0 +1,15 @@
+mixin tourItem(imagePath, tourPrice, tourTitle)
+  .tour
+    .tour-top
+      img.tour-image(src=imagePath alt='tour images')
+      span.tour-price #{tourPrice}
+    .tour-content
+      h3.tour-title #{tourTitle}
+      .tour-rating
+        .tour-review
+          .tour-star
+            img(src='./images/star.png' alt='tour-star')
+          .tour-review-count
+            span 4.8 (12 reviews)
+        .tour-duration Duration: 9 hours
+      a.tour-button(href='' target='-blank' rel='noopener noreferrer') Tours Price $61

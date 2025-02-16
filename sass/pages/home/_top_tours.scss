@@ -1,0 +1,109 @@
+.top-tours {
+  margin-bottom: 70px;
+}
+
+.tour {
+  /* width: calc(33.33% - 30px); */
+  width: calc(calc(100% / var(--columns)) - var(--spacing));
+  height: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  /* margin-left: 30px; */
+  /* margin-bottom: 30px; */
+  &-list {
+    --columns: 3;
+    --gap: 30px;
+    --spacing: calc(calc((var(--columns) - 1) * var(--gap)) / var(--columns));
+    /* margin-left: -30px; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    column-gap: var(--gap);
+    row-gap: var(--gap);
+    gap: var(--gap);
+  }
+
+  &-content {
+    padding: 20px 20px 14px 20px;
+  }
+  &-title {
+    color: var(--title-color);
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &-rating {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-review {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  &-top {
+    position: relative;
+  }
+  &-image {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    object-fit: cover;
+    height: 239px;
+    display: block;
+  }
+  &-button {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+  }
+  &-price {
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    left: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fcfcfd;
+    background-color: rgb(53, 57, 69, 0.8);
+    padding: 5px 16px;
+    line-height: 20px;
+    border-radius: 4px;
+  }
+  &-review-count {
+    color: #353945;
+  }
+
+  &-duration {
+    color: #353945;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    &-list {
+      display: grid;
+      grid-auto-flow: column; // tổ chức theo dạng column
+      grid-auto-columns: 320px; // độ dài các cột là 320px
+      overflow-x: auto;
+      padding: 0 30px 30px; // hiển thj shadow
+      margin-left: -30px;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+    }
+    &-item {
+      scroll-snap-align: center;
+    }
+  }
+}

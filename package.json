@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "nodejs": "^0.0.0",
+    "pug": "^3.0.3",
+    "sass": "^1.79.4"
+  },
+  "devDependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
